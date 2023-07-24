@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Реалізовуємо форму для реєстрації.
+    Поля:
+
+    Ім'я, Прізвище (Текстові поля)
+    Дата народження (Текстове поле)
+    Стать (radio)
+    Місто (select)
+    Адреса (textarea)
+    Мови, якими володіє (checkbox)
+    ….
+    Кнопка “Зберегти”
+
+    За натисканням на кнопку замість форми повинна виводитися “таблиця” з даними, які ввів користувач. -->
+
+    <form>
+        <label for="name">Name, surname: </label>
+        <br>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="birth">Date of Birth: </label>
+        <br>
+        <input type="text" name="birth" id="birth" required>
+        <br>
+        <span id="error">Incorrect value</span>
+        <br>
+        <label for="sex">Sex: </label>
+        <br>
+        <input type="radio" name="sex" value="Male" checked>Male
+        <input type="radio" name="sex" value="Female">Female
+        <input type="radio" name="sex" value="Other">Other
+        <br>
+        <label for="city">City: </label>
+        <select name="city" id="city">
+            <option value="Kyiv">Kyiv</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Rivne">Rivne</option>
+            <option value="Kherson">Kherson</option>
+            <option value="Simferopol">Simferopol</option>
+        </select>
+        <br>
+        <label for="address">Address: </label>
+        <br>
+        <textarea name="address" id="address" cols="30" rows="3" required></textarea>
+        <br>
+        <label for="languages">Languages: </label>
+        <input type="checkbox" name="languages" id="ukrainian" value="Ukrainian" checked>
+        <label for="ukrainian">Ukrainian</label>
+        <input type="checkbox" name="languages" id="english" value="English">
+        <label for="english">English</label>
+        <input type="checkbox" name="languages" id="polish" value="Polish">
+        <label for="polish">Polish</label>
+        <input type="checkbox" name="languages" id="other" value="Other">
+        <label for="other">Other</label>
+        <br>
+        <br>
+        <input type="submit" name="submit" id="submit" value="Зберегти">
+    </form>
+    <br>
+    <table id="table"></table>
+    <script src="./script.js"></script>
+</body>
+</html>
